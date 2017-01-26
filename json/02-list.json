@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Spotty",
+    "weight": 12.9,
+    "sex": "male"
+  },
+  {
+    "name": "Dashy",
+    "weight": 9.2,
+    "sex": "female"
+  },
+  {
+    "name": "Sparky",
+    "weight": 7.3,
+    "sex": "male"
+  }
+]
