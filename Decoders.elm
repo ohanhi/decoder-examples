@@ -51,18 +51,20 @@ dogDecoder =
 sexDecoder : Decoder Sex
 sexDecoder =
     string
-        |> Json.Decode.andThen
-            (\sexString ->
-                case sexString of
-                    "male" ->
-                        Json.Decode.succeed Male
+        |> Json.Decode.map sexFromString
 
-                    "female" ->
-                        Json.Decode.succeed Female
 
-                    _ ->
-                        Json.Decode.succeed Unknown
-            )
+sexFromString : String -> Sex
+sexFromString sexString =
+    case sexString of
+        "male" ->
+            Male
+
+        "female" ->
+            Female
+
+        _ ->
+            Unknown
 
 
 listDecoder : Decoder (List Dog)
